@@ -2,7 +2,7 @@
 
 A production-ready, reusable hackathon backend template built with modern TypeScript and best practices. Perfect for student projects, MVPs, and rapid prototyping.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Runtime**: Node.js (>=20)
 - **Language**: TypeScript
@@ -14,21 +14,21 @@ A production-ready, reusable hackathon backend template built with modern TypeSc
 - **Environment**: dotenv
 - **Rate Limiting**: express-rate-limit
 
-## ✨ Features
+## Features
 
-- ✅ Complete authentication system (register/login)
-- ✅ JWT-based authorization
-- ✅ Password hashing with bcrypt (10 rounds)
-- ✅ Request validation using Zod
-- ✅ Global error handling
-- ✅ Rate limiting on auth routes
-- ✅ Graceful shutdown handling
-- ✅ Prisma singleton pattern with connection pooling
-- ✅ Health check endpoints
-- ✅ TypeScript strict mode
-- ✅ Modular architecture
+- Complete authentication system (register/login)
+- JWT-based authorization
+- Password hashing with bcrypt (10 rounds)
+- Request validation using Zod
+- Global error handling
+- Rate limiting on auth routes
+- Graceful shutdown handling
+- Prisma singleton pattern with connection pooling
+- Health check endpoints
+- TypeScript strict mode
+- Modular architecture
 
-## 📦 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -71,7 +71,7 @@ A production-ready, reusable hackathon backend template built with modern TypeSc
 
 Your server should now be running at `http://localhost:3000`!
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 frenzy-backend/
@@ -99,7 +99,7 @@ frenzy-backend/
 └── package.json
 ```
 
-## 🔌 Available Endpoints
+## Available Endpoints
 
 ### Health Check
 - `GET /health` - Public health check
@@ -148,7 +148,7 @@ Both return:
 }
 ```
 
-## 🛠 Adding New Modules
+## Adding New Modules
 
 Follow the modular pattern to add new features:
 
@@ -206,7 +206,7 @@ Follow the modular pattern to add new features:
    app.use("/your-endpoint", yourModuleRoutes);
    ```
 
-## 🔒 Protecting Routes
+## Protecting Routes
 
 Use the `authenticateToken` middleware to protect routes:
 
@@ -219,7 +219,7 @@ router.get("/protected", authenticateToken, (req, res) => {
 });
 ```
 
-## ✅ Validation
+## Validation
 
 Use the `validate` middleware with Zod schemas:
 
@@ -230,14 +230,14 @@ import { yourSchema } from "./yourModule.types";
 router.post("/endpoint", validate(yourSchema), controller);
 ```
 
-## 📝 NPM Scripts
+## NPM Scripts
 
 - `npm run dev` - Start development server with auto-reload
 - `npm run build` - Compile TypeScript to JavaScript
 - `npm run prisma:migrate` - Run database migrations
 - `npm run prisma:generate` - Generate Prisma client
 
-## 🔧 Prisma Commands
+## Prisma Commands
 
 ```bash
 # Create a new migration
@@ -250,7 +250,7 @@ npm run prisma:generate
 npx prisma studio
 ```
 
-## 🌐 Environment Variables
+## Environment Variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -259,7 +259,7 @@ npx prisma studio
 | `PORT` | Server port | `3000` |
 | `NODE_ENV` | Environment mode | `development` or `production` |
 
-## 🔐 Security Features
+## Security Features
 
 - **Password Hashing**: bcrypt with 10 salt rounds
 - **JWT Tokens**: 7-day expiration
@@ -268,7 +268,7 @@ npx prisma studio
 - **Error Handling**: No stack traces leaked in production
 - **CORS**: Enabled for cross-origin requests
 
-## 🚦 Error Handling
+## Error Handling
 
 All errors are caught by the global error handler. Use the `AppError` class for custom errors:
 
@@ -278,7 +278,7 @@ import { AppError } from "../middleware/error.middleware";
 throw new AppError("Resource not found", 404);
 ```
 
-## 📚 Best Practices
+## Best Practices
 
 1. **Always validate inputs** with Zod schemas
 2. **Use async/await** with try-catch blocks
