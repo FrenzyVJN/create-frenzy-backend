@@ -1,0 +1,13 @@
+{
+    "name": "create-frenzy-backend",
+    "version": "0.1.0",
+    "type": "module",
+    "bin": {
+        "create-frenzy-backend": "bin/create-frenzy-backend.js"
+    },
+    "files": [
+        "bin",
+        "template"
+    ],
+    "license": "MIT"
+}
